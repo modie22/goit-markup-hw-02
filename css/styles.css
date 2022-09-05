@@ -22,11 +22,14 @@ body {
 .list{
     list-style: none;
 }
-.text-decor{
+.text-decor a{
     text-decoration: none;
 }
 
 /*Header section*/
+.page-header{
+    background-color: var(--minor-color);
+}
 /*logo*/
 .logo-header{
     color:var(--title-text-color);
@@ -66,11 +69,13 @@ body {
 .auth-nav .link:hover,
 .auth-nav .link:focus{
     color: var(--accent-color);
-}
+} 
+
 /*hero section*/
 /*Колір поставив шоб текст краще видно було*/
 .hero{
     background-color: #2F303A;
+    text-align: center;
 }
 .hero-title{
     color:var(--minor-color);
@@ -85,6 +90,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+    cursor: pointer;
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
@@ -112,7 +118,9 @@ body {
 }
 
 /*Employment section*/
-
+.team-section{
+    background-color: #F5F4FA;
+}
 .team-list .title{
     color:var(--title-text-color);
     font-weight: 500;
@@ -127,9 +135,11 @@ body {
 }
 
 /*Footer section*/
+
 .logo-footer{
     color: var(--minor-color);
     font-weight: 700;
+    font-family: 'Raleway';
     font-size: 26px;
     line-height: 1.19;
 }
@@ -137,9 +147,14 @@ body {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.7;
+    font-style: normal;
 }
-.address-list .address{
+.address-list .geoloc{
     color:var(--minor-color) ;
+}
+.address-list .contact:hover,
+.address-list .contact:focus{
+    color: var(--accent-color);
 }
 .footer-section{
     background-color: #2F303A;
@@ -148,10 +163,12 @@ body {
 .portfolio-section{
     background-color: #F5F5F5;
 }
+/*Фільтри (кнопки)*/
 .filter-list .button{
     color: var(--title-text-color);
     background-color: #F5F4FA;
     border: 0;
+    cursor: pointer;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
@@ -162,6 +179,7 @@ body {
     color: var(--minor-color);
     background-color: var(--accent-color);
 }
+/*Секція портфоліо*/
 .portfolio-list .title{
     color: var(--title-text-color);
     font-size: 18px;
