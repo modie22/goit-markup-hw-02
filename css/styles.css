@@ -3,6 +3,11 @@
     --title-text-color:#212121;
     --accent-color:#2196F3;
     --minor-color:#FFFFFF;
+    --primary-bg:#F5F5F5;
+    --secondary-bg:#2F303A;
+    --button-bg:#F5F4FA;
+    --footer-text-color:rgba(255, 255, 255, 0.6);
+    --button-active:#188CE8;
 
 }
 
@@ -15,7 +20,7 @@
 /*фон #F5F4FA*/
 body {
     color:var(--primary-text-color);
-    background-color:#F5F5F5 ;
+    background-color:var(--primary-bg);
     font-family: Roboto, sans-serif;
     letter-spacing: 0.03em;
 }
@@ -25,6 +30,19 @@ body {
 .text-decor a{
     text-decoration: none;
 }
+/*для приховування тексту*/
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+} 
 
 /*Header section*/
 .page-header{
@@ -74,7 +92,7 @@ body {
 /*hero section*/
 /*Колір поставив шоб текст краще видно було*/
 .hero{
-    background-color: #2F303A;
+    background-color: var(--secondary-bg);
     text-align: center;
 }
 .hero-title{
@@ -95,9 +113,14 @@ body {
     text-align: center;
     letter-spacing: 0.06em;
 }
+.hero .button:hover,
+.hero .button:focus{
+    background-color: var(--button-active);
+}
 .button{
     color:var(--minor-color) ;
     background-color:var(--accent-color) ;
+    font-family: inherit;
 }
 /*Features section*/
 .section-title{
@@ -119,7 +142,10 @@ body {
 
 /*Employment section*/
 .team-section{
-    background-color: #F5F4FA;
+    background-color: var(--button-bg);
+}
+.team-list>li{
+    background-color: var(--minor-color);
 }
 .team-list .title{
     color:var(--title-text-color);
@@ -144,7 +170,7 @@ body {
     line-height: 1.19;
 }
 .address-list .link{
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--footer-text-color);
     font-size: 14px;
     line-height: 1.7;
     font-style: normal;
@@ -152,21 +178,23 @@ body {
 .address-list .geoloc{
     color:var(--minor-color) ;
 }
+.address-list .geoloc:hover,
+.address-list .geoloc:focus{
+      color: var(--accent-color);
+}
 .address-list .contact:hover,
 .address-list .contact:focus{
     color: var(--accent-color);
 }
 .footer-section{
-    background-color: #2F303A;
+    background-color: var(--secondary-bg);
 }
 /*Portfolio page*/
-.portfolio-section{
-    background-color: #F5F5F5;
-}
+
 /*Фільтри (кнопки)*/
 .filter-list .button{
     color: var(--title-text-color);
-    background-color: #F5F4FA;
+    background-color: var(--button-bg);
     border: 0;
     cursor: pointer;
     font-weight: 500;
@@ -185,6 +213,9 @@ body {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+}
+.portfolio-list>li{
+    background-color: var(--minor-color);
 }
 .portfolio-list .text{
     color: var(--primary-text-color);
